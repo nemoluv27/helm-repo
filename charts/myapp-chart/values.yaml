@@ -21,7 +21,7 @@ nginx:
 
 ingress:
   healthCheckPath: /healthz
-  host: app.jiyong.store
+  host: app.jiyongbk.store
   certificateArn: arn:aws:acm:us-east-2:569934397842:certificate/c3d9b0fa-12f0-42f0-bd18-a2c61c88380b
   group:
     name: shared-alb
