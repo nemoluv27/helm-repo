@@ -10,7 +10,7 @@ redis:
 
 app:
   repository: public.ecr.aws/n4q9v7r0/jiyong-lab2
-  tag: version-3
+  tag: Version-6
   replicas: 1
 
 nginx:
