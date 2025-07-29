@@ -1,0 +1,28 @@
+db:
+  repository: public.ecr.aws/g1o9h9r6/chungmin-lab
+  tag: db-v1
+  replicas: 1
+
+redis:
+  repository: public.ecr.aws/g1o9h9r6/chungmin-lab
+  tag: redis-v1
+  replicas: 1
+
+app:
+  repository: public.ecr.aws/n4q9v7r0/jiyong-lab2
+  tag: version-3
+  replicas: 1
+
+nginx:
+  repository: nginx
+  tag: latest
+  replicas: 1
+
+
+ingress:
+  healthCheckPath: /healthz
+  host: app.jiyong.store
+  certificateArn: arn:aws:acm:us-east-2:569934397842:certificate/c3d9b0fa-12f0-42f0-bd18-a2c61c88380b
+  group:
+    name: shared-alb
+    order: "10"
